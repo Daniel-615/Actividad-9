@@ -143,7 +143,7 @@ void ejercicio3(){
 	cin>>confirmar;
    if(confirmar=='S' || confirmar=='s'){
    	 FILE*archivo=fopen(nombre_archivo,"a+b");
-    fwrite(estudiantes,sizeof(Estudiante),i,archivo);
+    fwrite(&estudiantes,sizeof(Estudiante),i,archivo);
     fclose(archivo);
     delete[] estudiantes;
    }
